@@ -1,0 +1,100 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container{
+    width: 90%;
+    margin: 0 auto;
+    height: 90%;
+    box-shadow: plum 3px 5px 3px 2px ;
+    border: palevioletred 2px solid;
+    border-radius: 25px;
+    padding: 25px;   
+   background-color: lightblue; 
+}
+button {   
+       background-color: #4CAF50;   
+       width: 40%; 
+       border-radius: 20px; 
+        color: orange;   
+        font-weight: bolder;
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;  
+       
+         }   
+ form {   
+         
+        width: 70%; 
+        margin: 0 auto;
+       
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ 
+</style>   
+</head>    
+<body>    
+    <center> <h1> Student Login Form </h1> </center>   
+    <form>  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" id="user" placeholder="Enter Username" >  
+            <label>Password : </label>   
+            <input type="text" placeholder="Enter Password" id="password">  
+            <button type="submit" id="login">Login</button>   
+            <input type="checkbox" checked="checked"> Remember me   
+            <button type="button" class="cancelbtn"> Cancel</button>   
+            Forgot <a href="#"> password? </a>   
+        </div>   
+    </form> 
+    <script>
+           document.getElementById('login').onclick=function(){
+               let inp=document.getElementById('user').value;
+               let pass=document.getElementById('password').value;
+               let length = pass.length;
+                console.log(length);
+               console.log(inp);
+               console.log(pass);
+               if(inp == "" && pass==""){
+                   alert("Username and password not filled");
+               }
+               else if(inp==""){
+                   alert("Username not filled")
+               }
+              else if(pass=="") {
+                   alert("password  not filled")
+               }
+               if(length >5){
+                   alert("Passwords word limit exceds try a 5 length password")
+               }
+
+           }
+        
+        
+    </script>    
+</body>     
+</html>  
